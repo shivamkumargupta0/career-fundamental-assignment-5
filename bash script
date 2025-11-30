@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Script Name: uptime_monitor.sh
+# Purpose: To check and log the system uptime automatically
+
+echo "System Uptime Monitor"
+echo "Date and Time:"
+date
+echo "System Uptime:"
+uptime
+
+# Save output to log file
+echo "Saving uptime details to uptime_log.txt..."
+date >> uptime_log.txt
+uptime >> uptime_log.txt
+echo "-----------------------------------" >> uptime_log.txt
+
+echo "Uptime check complete!"
